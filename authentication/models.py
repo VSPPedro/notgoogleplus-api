@@ -22,7 +22,7 @@ class AccountManager(BaseUserManager):
 
 
 class Account(AbstractBaseUser):
-    email = models.Email.Field(unique=True)
+    email = models.EmailField(unique=True)
     username = models.CharField(max_length=40, unique=True)
 
     first_name = models.CharField(max_length=40, blank=True)
